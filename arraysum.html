@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Sum</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Sum of Array Elements</h2>
+  <input type="text" id="array" placeholder="Enter numbers (e.g. 1,2,3)">
+  <button onclick="sumArray()">Sum</button>
+  <p id="result"></p>
+
+  <script>
+    function sumArray() {
+      const arr = document.getElementById("array").value.split(",").map(Number);
+      const total = arr.reduce((a, b) => a + b, 0);
+      document.getElementById("result").innerText = "Sum: " + total;
+    }
+  </script>
+</body>
+</html>
